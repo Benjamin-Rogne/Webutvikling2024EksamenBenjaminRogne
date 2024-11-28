@@ -1,0 +1,30 @@
+                <article>
+                    <input type="radio" id="frakt">
+                    <label for="express">Ekspress Hjemlevering</label>
+                    <p>3-4 Virkedager</p>
+                    <p>59 kr</p>
+                    <p>skriv her</p>
+                </article>
+                <article>
+                    <input type="radio" id="frakt">
+                    <label for="css">Express pakke til utleveringssted</label>
+                    <p>3-4 Virkedager</p>
+                    <p>59 kr</p>
+                </article>
+                <article>
+                    <input type="radio" id="frakt">
+                    <label for="javascript">Standard Hjemlevering</label>
+                    <p>3-4 Virkedager</p>
+                    <p>Gratis</p>
+                    <p>skriv her</p>
+                </article>
+
+        <section class="flex-banner">
+            <article>
+                <h2>totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</h2>
+                <p>
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiu totamm, veritatis et quasi architplicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                </p>
+                <a id="white-button" href="#">FÅ EN PRØVEPAKKE I DAG</a>
+            </article>
+        </section>

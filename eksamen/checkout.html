@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <main>
+        <a href="#">Fortsett å handle</a>
+        <h1>Kasse</h1>
+        <section>
+            <h2>1. SHOPPINGBAGEN DIN</h2>
+            <article>
+                <img src="bilder/dog-picture 2 edited.jpg" alt="">
+                <i>heart icon</i>
+                <i>thrash icon</i>
+                <h3>product name</h3>
+                <p>2999 kr</p>
+                <p>farge!!</p>
+                <form>
+                    <label>Størrelse:</label>
+                    <select>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <label>Antall:</label>
+                    <input type="number" step="1" placeholder="1">
+                </form>
+                <i>icons stars 5x</i>
+                <p>x Reviews</p>
+            </article>
+        </section>
+        <section>
+            <h2>2. DINE OPPLYSNINGER</h2>
+            <form>
+                <h3>Leveringsadresse</h3>
+                <label for="fname">First name:</label>
+                <input type="text" placeholder="Fornavn" pattern="[A-Za-zÆØÅæøå]+" id="fname" name="personopplysninger" required>
+                <label for="lname">Last name:</label>
+                <input type="text" placeholder="Etternavn" pattern="[A-Za-zÆØÅæøå]+" id="lname" name="personopplysninger" required>
+                <label for="adress">gateadresse:</label>
+                <input type="text" placeholder="Gateadresse" id="fname" name="personopplysninger" required>
+                <label for="lname">postnummer:</label>
+                <input type="number" min="0000" max="9999" step="1" placeholder="Postnummer" name="personopplysninger" required>
+                <label for="fname">poststed:</label>
+                <input type="text" placeholder="Poststed" id="fname" name="personopplysninger" required>
+                <h3>Kontaktinformasjon</h3>
+                <label for="E-post">Epost:</label>
+                <input type="email" placeholder="E-post" id="lname" name="personopplysninger" required>
+                <label for="fname">telefon:</label>
+                <input type="number" placeholder="Telefon" id="fname" name="personopplysninger" required>
+                <input type="submit" value="Lagre" name="personopplysninger">
+                <a href="index.html">avbryt</a>
+            </form> 
+        </section>
+        <section>
+            <h2>3. LEVERING</h2>
+            <form id="frakt">
+                <article>
+                    <input type="radio" id="" name="frakt">
+                    <label for="express">Ekspress Hjemlevering</label>
+                    <p>3-4 Virkedager</p>
+                    <p>59 kr</p>
+                    <p>skriv her</p>
+                </article>
+                <article>
+                    <input type="radio" id="" name="frakt">
+                    <label for="css">Express pakke til utleveringssted</label>
+                    <p>3-4 Virkedager</p>
+                    <p>59 kr</p>
+                </article>
+                <article>
+                    <input type="radio" id="" name="frakt">
+                    <label for="javascript">Standard Hjemlevering</label>
+                    <p>3-4 Virkedager</p>
+                    <p>Gratis</p>
+                    <p>skriv her</p>
+                </article>
+            </form>
+        </section>
+        <section>
+            <h2>4. BETALING</h2>
+            <form>
+                <h3>Betal med kort icon</h3>
+                <label for="fname">Kortnummer:</label>
+                <input type="number" min="16 number" max="9999999999999999" step="1" placeholder="Postnummer" name="betaling" required>
+                <label for="lname">Utløpsdato:</label>
+                <input type="date" placeholder="icon/dd/yyyy" id="lname" name="betaling" required>
+                <label for="fname">CVC/CVV:</label>
+                <input type="number" placeholder="CVC/CVV" id="fname" name="betaling" required>
+                <p>Å betale inkl. mva.</p>
+                <p>1199</p>
+                <input type="submit" value="Fullfør kjøp"> 
+                <p>Du bekrefter herved at opplysningene og dokumentene du har
+                    oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
+                    retten til å heve eller avslutte avtaleforholdet dersom det foreligger
+                    uriktige eller ufullstendige opplysninger.</p>
+            </form>
+            <form>
+                <input type="checkbox" id="">
+                <label for="nyhetsbrev">Ja, jeg godtar vilkårene.</label>
+                <input type="checkbox" id="">
+                <label for="tilbud">Ja takk! Send nyhetsbrev til meg.</label>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
