@@ -4,75 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product side</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4651b4700a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header class="flex-container">
+        <nav class="flex-nav">
+            <form>
+                <label for="search"></label>
+                <input type="search" placeholder="søk her" id="search">
+                <button type="submit" class="submit-button" id="submit-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <ul class="flex-ul">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#mest-pop-produkt">produkter</a></li>
+                <li class="logo-space"><a href="index.html">LOGO</a></li>
+                <li><a href="index.html#mest-pop-kategori">kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontak oss</a></li>
+            </ul>
+            <ul class="flex-ul">
+                <li><i class="fa-regular fa-user"></i></li>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" id="shopping-cart-link"></i></a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div>
-            <ul>
-                <li><a href="index.html">Hjem ></a></li>
-                <li><a href="index.html#mest-pop-kategori">Kategori ></a></li>
+            <ul class="produktside-breadcrumbs">
+                <li><a href="index.html">Hjem </a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
+                <li><a href="index.html#mest-pop-kategori">Kategori </a></li>
+                <li><i class="fa-solid fa-chevron-right"></i></li>
                 <li><a href="product.html">Produktnavn</a></li>
             </ul>
         </div>
-        <section>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <section class="produkt-kort img">
+            <img src="bilder/shoes.jpg" alt="">
+            <img src="bilder/shoes.jpg" alt="">
+            <img src="bilder/shoes.jpg" alt="">
+            <img src="bilder/shoes.jpg" alt="">
             <h3>Produktnavn</h3>
             <a href="#">MERKENAVN</a>
             <p>5195 kr inkl. mva.</p>
-            <p>Farge: beige</p>
-            <form>
-                <label>Størrelse:</label>
-                <select>
-                    <option value="Velg Størrelse">Velg Størrelse</option>
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-            </form>
-            <input type="button" value="Legg i handlekurv">
-            <input type="button" value="heart icon">
-            <details>
-                <summary>Materiale og vedlikehold</summary>
-                <p>da shit brother</p>
-            </details>
-            <details>
-                <summary>Produktdetaljer</summary>
-                <p>da shit brother</p>
-                <ul></ul>
-            </details>
-            <details>
-                <summary>Størrelsestabell</summary>
-                <p>da shit brother</p>
-            </details>
-            <details>
-                <summary>Andmeldelser med stjerner</summary>
-                <p>nameofman</p>
-                <p>05-09-2024</p>
-                <i>heart icons 5x</i>
-                <p>dummytext</p>
-            </details>
+            <p>Farge: grå</p>
         </section>
     </main>
     <aside>
         <section>
-            <h2>Lignende produkter</h2>
-            <a href="#">Se flere lignende produkter</a>
-            <i>arrow right icon</i>
-            <article class="flex-product-card">
-                <i>heart icon</i>
-                <img src="bilder/dog-picture 2 edited.jpg" alt="">
+            <h2 id="lignende-produkter">Lignende produkter</h2>
+            <article class="produkt-kort">
+                <img src="bilder/jeans.jpg" alt="produkt">
                 <a href="product.html"><h3>product name</h3></a>
-                <p>2999 kr</p>
-                <i>icons stars 5x</i>
-                <p>x Reviews</p>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/jeans.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/jeans.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/jeans.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/jeans.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/jeans.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
             </article>
         </section>
     </aside>
+    <footer>
+        <section id="footer-logo">
+            <h2>LOGO</h2>
+            <p>est laborum et dolorum fuga.</p>
+        </section>
+        <section id="kontakt-oss">
+            <h2>KONTAKT</h2>
+            <ul class="flex-ul-footer">
+                <li><i class="fa-solid fa-location-dot"></i> Adresse: B R A Veien 4, 1757 Halden</li>
+                <li><i class="fa-solid fa-phone"></i> Telefon:  99 99 99 00</li>
+                <li><i class="fa-solid fa-envelope"></i> E-post:  navn@email.no</li>
+                <li><i class="fa-solid fa-clock"></i> Åpningstider:  Stenger 15.00</li>
+            </ul>
+        </section>
+        <section id="shortcuts">
+            <h2>SNARVEIER</h2>
+            <nav class="flex-nav-footer">
+                <ul class="flex-ul-footer">
+                    <li><a href="index.html#mest-pop-produkt">produkter</a></li>
+                    <li><a href="index.html#mest-pop-kategori">Kategorier</a></li>
+                    <li><a href="kontakt-oss">Kontakt oss</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="sosmedier">
+            <h2>SOSIALE MEDIER</h2>
+            <nav class="flex-nav-footer">
+                <ul class="flex-ul-footer">
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-square-pinterest"></i></a></li>
+                </ul>
+            </nav>
+        </section>   
+    </footer>
 </body>
 </html>

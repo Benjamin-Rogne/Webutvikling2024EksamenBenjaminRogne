@@ -4,110 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4651b4700a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header class="flex-container">
+        <nav class="flex-nav">
+            <form>
+                <label for="search"></label>
+                <input type="search" placeholder="søk her" id="search">
+                <button type="submit" class="submit-button" id="submit-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <ul class="flex-ul">
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="index.html#mest-pop-produkt">produkter</a></li>
+                <li class="logo-space"><a href="index.html">LOGO</a></li>
+                <li><a href="index.html#mest-pop-kategori">kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontak oss</a></li>
+            </ul>
+            <ul class="flex-ul">
+                <li><i class="fa-regular fa-user"></i></li>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" id="shopping-cart-link"></i></a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <a href="#">Fortsett å handle</a>
         <h1>Kasse</h1>
-        <section>
+        <section class="shoppingbag">
             <h2>1. SHOPPINGBAGEN DIN</h2>
-            <article>
-                <img src="bilder/dog-picture 2 edited.jpg" alt="">
-                <i>heart icon</i>
-                <i>thrash icon</i>
+            <article class="handlekurv_produkt-kort">
+                <img src="bilder/glasses.jpg" alt="">
                 <h3>product name</h3>
-                <p>2999 kr</p>
-                <p>farge!!</p>
-                <form>
-                    <label>Størrelse:</label>
-                    <select>
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    <label>Antall:</label>
-                    <input type="number" step="1" placeholder="1">
-                </form>
-                <i>icons stars 5x</i>
-                <p>x Reviews</p>
+                <p>Kr 2999</p>
+                <p>Farge: svart</p>
+            </article>
+            <article class="handlekurv_produkt-kort">
+                <img src="bilder/glasses.jpg" alt="">
+                <h3>product name</h3>
+                <p>Kr 2999</p>
+                <p>Farge: svart</p>
+            </article>
+            <article class="handlekurv_produkt-kort">
+                <img src="bilder/glasses.jpg" alt="">
+                <h3>product name</h3>
+                <p>Kr 2999</p>
+                <p>Farge: svart</p>
             </article>
         </section>
         <section>
             <h2>2. DINE OPPLYSNINGER</h2>
-            <form>
+            <form class="dine-opplysninger">
                 <h3>Leveringsadresse</h3>
-                <label for="fname">First name:</label>
-                <input type="text" placeholder="Fornavn" pattern="[A-Za-zÆØÅæøå]+" id="fname" name="personopplysninger" required>
-                <label for="lname">Last name:</label>
-                <input type="text" placeholder="Etternavn" pattern="[A-Za-zÆØÅæøå]+" id="lname" name="personopplysninger" required>
-                <label for="adress">gateadresse:</label>
-                <input type="text" placeholder="Gateadresse" id="fname" name="personopplysninger" required>
-                <label for="lname">postnummer:</label>
-                <input type="number" min="0000" max="9999" step="1" placeholder="Postnummer" name="personopplysninger" required>
-                <label for="fname">poststed:</label>
-                <input type="text" placeholder="Poststed" id="fname" name="personopplysninger" required>
-                <h3>Kontaktinformasjon</h3>
-                <label for="E-post">Epost:</label>
-                <input type="email" placeholder="E-post" id="lname" name="personopplysninger" required>
-                <label for="fname">telefon:</label>
-                <input type="number" placeholder="Telefon" id="fname" name="personopplysninger" required>
-                <input type="submit" value="Lagre" name="personopplysninger">
-                <a href="index.html">avbryt</a>
+                <label for="fname" class="hide-labels">First name:</label>
+                <input type="text" placeholder="Fornavn*" pattern="[A-Za-zÆØÅæøå]+" id="fname" name="personopplysninger" required>
+                <label for="lname" class="hide-labels">Last name:</label>
+                <input type="text" placeholder="Etternavn*" pattern="[A-Za-zÆØÅæøå]+" id="lname" name="personopplysninger" required>
+                <label for="adress" class="hide-labels">gateadresse:</label>
+                <input type="text" placeholder="Gateadresse*" name="personopplysninger" id="adress" required>
+                <label for="postnummer" class="hide-labels">postnummer:</label>
+                <input type="number" min="0000" max="9999" step="1" placeholder="Postnummer*" id="postnummer" name="personopplysninger" required>
+                <label for="poststed" class="hide-labels">poststed:</label>
+                <input type="text" placeholder="Poststed*" id="poststed" name="personopplysninger" required>
+                <input type="submit" value="Lagre" name="personopplysninger" id="lagre-dine-opplysninger">
+                <a href="#">Avbryt</a>
             </form> 
         </section>
-        <section>
+        <section class="frakt-container">
             <h2>3. LEVERING</h2>
+            <p>LEVERINGSVALG</p>
             <form id="frakt">
-                <article>
-                    <input type="radio" id="" name="frakt">
-                    <label for="express">Ekspress Hjemlevering</label>
-                    <p>3-4 Virkedager</p>
-                    <p>59 kr</p>
-                    <p>skriv her</p>
+                <article class="levering">
+                    <input type="radio" id="expresshjem" name="frakt">
+                    <h3><label for="expresshjem">Ekspress Hjemlevering</label></h3>
                 </article>
-                <article>
-                    <input type="radio" id="" name="frakt">
-                    <label for="css">Express pakke til utleveringssted</label>
-                    <p>3-4 Virkedager</p>
-                    <p>59 kr</p>
+                <article class="levering">
+                    <input type="radio" id="exutleveringssted" name="frakt">
+                    <h3><label for="exutleveringssted">Express pakke til utleveringssted</label></h3>
                 </article>
-                <article>
-                    <input type="radio" id="" name="frakt">
-                    <label for="javascript">Standard Hjemlevering</label>
-                    <p>3-4 Virkedager</p>
-                    <p>Gratis</p>
-                    <p>skriv her</p>
+                <article class="levering">
+                    <input type="radio" id="standardhjem" name="frakt">
+                    <h3><label for="standardhjem">Standard Hjemlevering</label></h3>
                 </article>
             </form>
         </section>
         <section>
             <h2>4. BETALING</h2>
-            <form>
-                <h3>Betal med kort icon</h3>
-                <label for="fname">Kortnummer:</label>
-                <input type="number" min="16 number" max="9999999999999999" step="1" placeholder="Postnummer" name="betaling" required>
-                <label for="lname">Utløpsdato:</label>
-                <input type="date" placeholder="icon/dd/yyyy" id="lname" name="betaling" required>
-                <label for="fname">CVC/CVV:</label>
-                <input type="number" placeholder="CVC/CVV" id="fname" name="betaling" required>
-                <p>Å betale inkl. mva.</p>
-                <p>1199</p>
-                <input type="submit" value="Fullfør kjøp"> 
-                <p>Du bekrefter herved at opplysningene og dokumentene du har
+            <form class="betal-med-kort">
+                <h3>Betal med kort <i class="fa-solid fa-credit-card"></i></h3>
+                <label for="cardnum">Kortnummer:</label>
+                <input type="number" max="9999999999999999" step="1" placeholder="342342****4435" id="cardnum" name="betaling" required>
+                <label for="finaldate">Utløpsdato:</label>
+                <input type="date" id="finaldate" name="betaling" required>
+                <label for="cvc/cvv">CVC/CVV:</label>
+                <input type="number" placeholder="CVC/CVV" id="cvc/cvv" name="betaling" required>
+                <p id="pris-placment">Å betale inkl. mva.</p>
+                <p>Kr 1199</p>
+                <input type="submit" value="Fullfør kjøp" id="fullforkjop"> 
+                <p id="vilkorene">Du bekrefter herved at opplysningene og dokumentene du har
                     oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
                     retten til å heve eller avslutte avtaleforholdet dersom det foreligger
                     uriktige eller ufullstendige opplysninger.</p>
             </form>
-            <form>
-                <input type="checkbox" id="">
-                <label for="nyhetsbrev">Ja, jeg godtar vilkårene.</label>
-                <input type="checkbox" id="">
-                <label for="tilbud">Ja takk! Send nyhetsbrev til meg.</label>
+            <form class="check-vilkore">
+                <article>
+                    <h3 class="hidden-header"> avkryssning for vilkår</h3>
+                    <input type="checkbox" id="vilkore">
+                    <label for="vilkore">Ja, jeg godtar vilkårene.</label>
+                </article>
+                <article>
+                    <h3 class="hidden-header">avkryssning for nyhetsbrev</h3>
+                    <input type="checkbox" id="nyhetsbrev">
+                    <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
+                </article>
             </form>
         </section>
     </main>
+    <footer>
+        <section id="footer-logo">
+            <h2>LOGO</h2>
+            <p>est laborum et dolorum fuga.</p>
+        </section>
+        <section id="kontakt-oss">
+            <h2>KONTAKT</h2>
+            <ul class="flex-ul-footer">
+                <li><i class="fa-solid fa-location-dot"></i> Adresse: B R A Veien 4, 1757 Halden</li>
+                <li><i class="fa-solid fa-phone"></i> Telefon:  99 99 99 00</li>
+                <li><i class="fa-solid fa-envelope"></i> E-post:  navn@email.no</li>
+                <li><i class="fa-solid fa-clock"></i> Åpningstider:  Stenger 15.00</li>
+            </ul>
+        </section>
+        <section id="shortcuts">
+            <h2>SNARVEIER</h2>
+            <nav class="flex-nav-footer">
+                <ul class="flex-ul-footer">
+                    <li><a href="index.html#mest-pop-produkt">produkter</a></li>
+                    <li><a href="index.html#mest-pop-kategori">Kategorier</a></li>
+                    <li><a href="kontakt-oss">Kontakt oss</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="sosmedier">
+            <h2>SOSIALE MEDIER</h2>
+            <nav class="flex-nav-footer">
+                <ul class="flex-ul-footer">
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-square-pinterest"></i></a></li>
+                </ul>
+            </nav>
+        </section>   
+    </footer>
 </body>
 </html>

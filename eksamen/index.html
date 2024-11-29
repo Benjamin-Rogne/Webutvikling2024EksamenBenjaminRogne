@@ -3,116 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>not a Pet Shop</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/4651b4700a.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
+<body class="grid-body">
+    <header class="flex-container">
         <nav class="flex-nav">
             <form>
                 <label for="search"></label>
                 <input type="search" placeholder="søk her" id="search">
-                <input type="submit" value="søk">
+                <button type="submit" class="submit-button" id="submit-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
             <ul class="flex-ul">
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="index.html#mest-pop-produkt">produkter</a></li>
-                <li class="flex-logo-space"><a href="index.html">LOGO</a></li>
+                <li class="logo-space"><a href="index.html">LOGO</a></li>
                 <li><a href="index.html#mest-pop-kategori">kategorier</a></li>
                 <li><a href="#kontakt-oss">Kontak oss</a></li>
             </ul>
             <ul class="flex-ul">
-                <li><i>Profil icon</i></li>
+                <li><i class="fa-regular fa-user"></i></li>
                 <li><i class="fa-regular fa-heart"></i></li>
-                <li><a href="checkout.html">HANDLEKURV IKON</a></li>
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping" id="shopping-cart-link"></i></a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="slider-container">
-            <article class="slider-banner banner-1">
-                <h2>Banner 1</h2>
-                <p>Content for the first banner.</p>
-            </article>
-            <article class="slider-banner banner-2">
-                <h2>Banner 2</h2>
-                <p>Content for the second banner.</p>
-            </article>
-            <article class="slider-banner banner-3">
-                <h2>Banner 3</h2>
-                <p>Content for the third banner.</p>
+        <section class="flex-banner">
+            <h2 class="hidden-header">Banner</h2>
+            <article>
+                <h2>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.</p>
+                <a href="" id="white-button">FÅ EN PRØVE PAKKE I DAG</a>
             </article>
         </section>
         <section id="mest-pop-produkt">
             <h2>Våre mest poppulære produkter</h2>
             <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa".</p>
             <article id="product-card-button-container">
+                <h3 class="hidden-header">Produkt filtere</h3>
                 <i class="product-card-button">New Product</i>
                 <i class="product-card-button">Special Price</i>
                 <i class="product-card-button">Best Sellers</i>
             </article>
-            <article class="flex-product-card">
-                <i>heart icon</i>
-                <img src="bilder/dog-picture 2 edited.jpg" alt="produkt">
+            <article class="produkt-kort">
+                <img src="bilder/watch.jpg" alt="produkt">
                 <a href="product.html"><h3>product name</h3></a>
-                <p>2999 kr</p>
-                <i>icons stars 5x</i>
-                <p>x Reviews</p>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/watch.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/watch.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/watch.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/watch.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
+            </article>
+            <article class="produkt-kort">
+                <img src="bilder/watch.jpg" alt="produkt">
+                <a href="product.html"><h3>product name</h3></a>
+                <p>Kr 1999</p>
             </article>
         </section>
-        <section id="mest-pop-kategori">
-            <h2>våre mest poppulære kategrier</h2>
-            <ul>
-                <li><i>Category 1</i></li>
-                <li><i>Category 2</i></li>
-                <li><i>Category 3</i></li>
-                <li><i>Category 4</i></li>
-                <li><i>Category 5</i></li>
-            </ul>
+        <section id="mest-pop-kategori" class="grid-kategorier">
+            <h2 class="hidden-header"> kategorier</h2>
+            <article class="category-top">
+                <h2>Våre mest poppulære kategrier</h2>
+                <p>Oppdag det beste av det beste</p>
+            </article>
+            <article class="grid-kategori-kort">
+                <h3 class="hidden-header">kategori kort</h3>
+                <i>Category 1</i>
+                
+            </article>
+            <article class="grid-kategori-kort">
+                <h3 class="hidden-header">kategori kort</h3>
+                <i>Category 2</i>
+                
+            </article>
+            <article class="grid-kategori-kort">
+                <h3 class="hidden-header">kategori kort</h3>
+                <i>Category 3</i>
+                
+            </article>
+            <article class="grid-kategori-kort">
+                <h3 class="hidden-header">kategori kort</h3>
+                <i>Category 4</i>
+                
+            </article>
+            <article class="grid-kategori-kort">
+                <h3 class="hidden-header">kategori kort</h3>
+                <i>Category 5</i>
+                
+            </article>
         </section>
-        <section>
+        <section class="andmeldelse-container">
             <h2>Andmeldelser</h2>
-            <article class="flex-reviev-card">
-                <img src="bilder/dog-picture 2 edited.jpg" alt="profile">
-                <a><h3>MR. MAN</h3></a>
-                <i>icons stars 5x</i>
+            <article class="andmeldelse-kort">
+                <img src="bilder/dog-picture-2-edited.jpg" alt="">
+                <a><h3>Dog Dogson</h3></a>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </article>
+            <article class="andmeldelse-kort">
+                <img src="bilder/dog-picture-2-edited.jpg" alt="">
+                <a><h3>Dog Dogson</h3></a>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </article>
+            <article class="andmeldelse-kort">
+                <img src="bilder/dog-picture-2-edited.jpg" alt="">
+                <a><h3>Dog Dogson</h3></a>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </article>
+            <article class="andmeldelse-kort">
+                <img src="bilder/dog-picture-2-edited.jpg" alt="">
+                <a><h3>Dog Dogson</h3></a>
                 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
             </article>
         </section>
     </main>
     <footer>
-        <section>
+        <section id="footer-logo">
             <h2>LOGO</h2>
-            <p>Bam! Slagord!</p>
+            <p>est laborum et dolorum fuga.</p>
         </section>
         <section id="kontakt-oss">
             <h2>KONTAKT</h2>
-            <p>
-                adresse
-                telefon
-                epost
-                åpningstider
-            </p>
+            <ul class="flex-ul-footer">
+                <li><i class="fa-solid fa-location-dot"></i> Adresse: B R A Veien 4, 1757 Halden</li>
+                <li><i class="fa-solid fa-phone"></i> Telefon:  99 99 99 00</li>
+                <li><i class="fa-solid fa-envelope"></i> E-post:  navn@email.no</li>
+                <li><i class="fa-solid fa-clock"></i> Åpningstider:  Stenger 15.00</li>
+            </ul>
         </section>
-        <section>
+        <section id="shortcuts">
             <h2>SNARVEIER</h2>
-            <nav class="flex-footer-nav">
-                <ul class="flex-footer-ul">
+            <nav class="flex-nav-footer">
+                <ul class="flex-ul-footer">
                     <li><a href="index.html#mest-pop-produkt">produkter</a></li>
                     <li><a href="index.html#mest-pop-kategori">Kategorier</a></li>
                     <li><a href="kontakt-oss">Kontakt oss</a></li>
                 </ul>
             </nav>
         </section>
-        <section>
+        <section id="sosmedier">
             <h2>SOSIALE MEDIER</h2>
-            <nav class="flex-footer-nav">
-                <ul class="flex-footer-ul">
-                    <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    <li><a href="https://www.facebook.com/">Facebook</a></li>
-                    <li><a href="https://www.linkedin.com/?trk=guest_homepage-basic_nav-header-logo">Linkedin</a></li>
-                    <li><a href="https://no.pinterest.com/">Pintrest</a></li>
+            <nav class="flex-nav-footer">
+                <ul class="flex-ul-footer">
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/?trk=guest_homepage-basic_nav-header-logo"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-square-pinterest"></i></a></li>
                 </ul>
             </nav>
         </section>   
